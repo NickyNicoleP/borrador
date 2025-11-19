@@ -1,0 +1,264 @@
+/* Estilos personalizados para el Sistema de Promoción de Telefonía Móvil */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #fd7e14;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px; /* Para compensar la navbar fija */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #4dabf7 100%);
+    padding: 100px 0;
+    color: white;
+}
+
+/* Estilos para el carrusel hero */
+.hero-section .carousel {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 15px;
+}
+
+.hero-section .carousel-control-prev:hover,
+.hero-section .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-section .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.hero-section .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 15px;
+    bottom: 20px;
+}
+
+.hero-section .carousel-caption h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hero-section .carousel-caption p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Tarjetas de planes */
+.plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.plan-card.featured {
+    border: 2px solid var(--secondary-color);
+}
+
+.plan-card .card-header {
+    border-radius: 0 !important;
+}
+
+/* Tarjetas de servicio en el cotizador */
+.service-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Pasos del cotizador */
+.cotizador-step {
+    display: none;
+}
+
+.cotizador-step.active {
+    display: block;
+}
+
+/* Animaciones para precios */
+.price {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Badge para ofertas especiales */
+.badge-promo {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+}
+
+/* Estilos para el rango de inputs */
+.form-range::-webkit-slider-thumb {
+    background-color: var(--primary-color);
+}
+
+.form-range::-moz-range-thumb {
+    background-color: var(--primary-color);
+}
+
+.form-range::-ms-thumb {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .plan-card {
+        margin-bottom: 20px;
+    }
+    
+    .hero-section .carousel {
+        margin-top: 30px;
+    }
+    
+    .hero-section .carousel-caption {
+        bottom: 10px;
+        padding: 10px;
+    }
+    
+    .hero-section .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Efectos de transición para elementos interactivos */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de administración */
+.admin-table {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para alertas personalizadas */
+.alert-promo {
+    background: linear-gradient(45deg, #ffc107, #fd7e14);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejoras para el carrusel en móviles */
+@media (max-width: 576px) {
+    .hero-section .carousel-control-prev,
+    .hero-section .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    
+    .hero-section .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .hero-section .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+    }
+}
