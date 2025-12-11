@@ -4,19 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cotizacion extends Model
+class Plan extends Model
 {
-    protected $table = 'cotizaciones';
-    public $timestamps = false;
+    protected $table = 'planes';
 
     protected $fillable = [
+        'nombre',
         'tipo_servicio',
         'datos_gb',
         'minutos',
         'sms',
-        'precio_final',
-        'plan_recomendado',
-        'email',
-        'telefono'
+        'precio_mensual',
+        'descripcion',
+        'activo',
     ];
 }

@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-card">
             <div class="login-header">
                 <h2><i class="bi bi-phone"></i> ConectaPlus</h2>
-                <p class="mb-0">Sistema de Administración</p>
+                <p class="mb-0">SistemaPlus Web</p>
             </div>
             
             <div class="login-body">
@@ -128,6 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <button type="submit" class="btn btn-primary w-100 btn-lg">
                         <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
                     </button>
+                    <div class="text-center mt-3">
+                        <a href="register.php" class="text-decoration-none">¿No tienes cuenta? Crea una cuenta aquí</a>
+                    </div>
                 </form>
                 
                 <div class="text-center mt-4">

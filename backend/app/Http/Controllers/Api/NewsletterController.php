@@ -20,7 +20,7 @@ class NewsletterController extends Controller
         ]);
 
         return response()->json([
-            'message' => 'Suscripción registrada correctamente.',
+            'message' => 'Suscripcion registrada correctamente.',
             'data' => Newsletter::create($data)
         ], 201);
     }
